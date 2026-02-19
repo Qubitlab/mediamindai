@@ -18,7 +18,7 @@ const services = [
   {
     num: '03',
     title: 'AI Systems & Development',
-    desc: 'Custom AI platform development, multi-model integrations, sentiment engines, intelligence pipelines, and production deployment.',
+    desc: 'AI platform development, autonomous agents, multi-model integrations, sentiment engines, intelligence pipelines, and production deployment.',
     tags: ['AI/ML', 'Full-Stack', 'Cloud Deploy'],
     visual: 'code',
   },
