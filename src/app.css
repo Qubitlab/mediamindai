@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-brand-black: #050508;
+  --color-brand-deep: #0a0a10;
+  --color-brand-surface: #111118;
+  --color-brand-surface2: #18181f;
+  --color-brand-border: #222230;
+  --color-brand-border-light: #2a2a3a;
+
+  --color-accent: #c8ff00;
+  --color-accent-dim: rgba(200,255,0,0.12);
+
+  --color-tool-blue: #3d7cff;
+  --color-tool-teal: #00e5a0;
+  --color-tool-purple: #a855f7;
+  --color-tool-coral: #ff5c45;
+
+  --color-txt: #f0ede8;
+  --color-txt-dim: #a8a4a0;
+  --color-txt-muted: #6b6770;
+
+  --animate-fade-up: fade-up 0.8s ease-out forwards;
+  --animate-marquee: marquee 50s linear infinite;
+  --animate-beam: beam-drop 3.5s cubic-bezier(0.4,0,0.2,1) infinite;
+  --animate-beam-fast: beam-drop 2.5s cubic-bezier(0.4,0,0.2,1) infinite;
+  --animate-pulse-slow: pulse 3s ease-in-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes beam-drop {
+    0% { top: -120px; opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+  }
+}
+
+/* ── Base ── */
+body {
+  background-color: var(--color-brand-black);
+  color: var(--color-txt);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(200,255,0,0.25);
+  color: #fff;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-brand-deep); }
+::-webkit-scrollbar-thumb { background: var(--color-brand-border-light); border-radius: 3px; }
+
+/* ── Grid background ── */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ── Grain overlay ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Beam animation ── */
+.beam-line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: rgba(255,255,255,0.03);
+  overflow: hidden;
+  z-index: 20;
+}
+.beam-line .beam {
+  position: absolute;
+  left: 0; width: 100%; height: 120px;
+  background: linear-gradient(to bottom, transparent, rgba(200,255,0,0.5), transparent);
+  filter: blur(1px);
+  animation: beam-drop 3.5s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+.beam-line .beam-white {
+  position: absolute;
+  left: 0; width: 100%; height: 100px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.6), transparent);
+  box-shadow: 0 0 10px rgba(255,255,255,0.25);
+  animation: beam-drop 3s cubic-bezier(0.4,0,0.2,1) infinite;
+}
+
+/* ── Reveal system ── */
+.rv {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(3px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rv.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ── Hero huge text ── */
+.text-huge {
+  font-size: clamp(3rem, 12vw, 14rem);
+}
