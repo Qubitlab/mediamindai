@@ -8,7 +8,7 @@ const tools = [
     desc: 'Multi-platform content distribution engine. Push content across all 6 major AI platforms and track visibility in real-time.',
     features: ['6-platform simultaneous distribution', 'Automated content scheduling', 'Real-time performance analytics', 'AI-optimized content suggestions'],
     color: 'tool-blue',
-    icon: '📡',
+    logo: '/feedsyncai.png',
     gradient: 'from-tool-blue',
   },
   {
@@ -18,7 +18,7 @@ const tools = [
     desc: 'AI brand intelligence platform generating 32-page TrustBrief reports with sentiment analysis, competitive positioning, and strategic roadmaps.',
     features: ['32-page consultant-grade reports', '6-platform AI sentiment consensus', 'Real Share of Voice analysis', '30/60/90-day implementation plans'],
     color: 'tool-teal',
-    icon: '📊',
+    logo: '/trustgraph_logo.png',
     gradient: 'from-tool-teal',
   },
   {
@@ -28,7 +28,7 @@ const tools = [
     desc: 'On-chain content and identity verification. The world\'s first AI reputation layer with blockchain-backed proof of authenticity.',
     features: ['Sentinel V-Verify vision analysis', 'Blockchain timestamping on Polygon', 'Trust badges & certificates', 'Deepfake detection safeguards'],
     color: 'tool-purple',
-    icon: '🛡️',
+    logo: '/V-verify-logo.png',
     gradient: 'from-tool-purple',
   },
   {
@@ -38,7 +38,7 @@ const tools = [
     desc: 'Full AI automation platform. Content distribution to intelligence reporting to strategic action execution — running autonomously.',
     features: ['Automated brand monitoring', 'Continuous intelligence reporting', 'Strategic decision execution', 'Full FeedSync + TrustGraph integration'],
     color: 'tool-coral',
-    icon: '🧠',
+    logo: '/logo-light.png',
     gradient: 'from-tool-coral',
   },
 ]
@@ -75,16 +75,13 @@ export default function TechShowcase() {
 
                 {/* Header row */}
                 <div className="flex justify-between items-start mb-6">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-${t.color}/10`}>
-                    {t.icon}
-                  </div>
+                  <img src={t.logo} alt={t.name} className="h-10 w-auto object-contain" />
                   <span className="font-mono text-[10px] tracking-wider uppercase px-3 py-1 border border-brand-border rounded-full text-txt-muted">
                     Live
                   </span>
                 </div>
 
-                {/* Name + domain */}
-                <h3 className="font-display font-bold text-xl text-white mb-1 tracking-tight">{t.name}</h3>
+                {/* Domain */}
                 <div className="font-mono text-[11px] text-txt-muted mb-4">{t.domain}</div>
 
                 {/* Description */}
