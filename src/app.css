@@ -146,7 +146,7 @@ body::after {
 
 /* ── Hero huge text ── */
 .text-huge {
-  font-size: clamp(3rem, 16vw, 24rem);
+  font-size: clamp(3rem, 11vw, 14rem);
 }
 
 /* ── Hero center beam effect ── */

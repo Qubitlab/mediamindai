@@ -145,7 +145,7 @@ export default function Hero() {
 
       {/* ── Big Center Title ── */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-20 pointer-events-none hidden md:block">
-        <h1 className="text-huge font-display font-bold tracking-[-0.04em] leading-none select-none whitespace-nowrap text-white">
+        <h1 className="text-huge font-display font-bold tracking-[-0.04em] leading-none select-none whitespace-nowrap text-white opacity-90 mix-blend-overlay">
           MEDIA MIND AI
         </h1>
       </div>
