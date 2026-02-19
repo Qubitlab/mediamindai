@@ -12,6 +12,8 @@ import PortalDashboard from './pages/portal/Dashboard'
 import PortalProjects from './pages/portal/Projects'
 import PortalInvoices from './pages/portal/Invoices'
 
+const isDashboard = window.location.hostname.includes('dashboard-mediamindai')
+
 export default function App() {
   return (
     <AuthProvider>
@@ -21,8 +23,8 @@ export default function App() {
         <div className="fixed inset-0 z-0 bg-gradient-to-b from-brand-black via-transparent to-brand-black pointer-events-none" />
 
         <Routes>
-          {/* Public */}
-          <Route path="/" element={<LandingPage />} />
+          {/* Public — dashboard domain skips landing page */}
+          <Route path="/" element={isDashboard ? <Navigate to="/login" replace /> : <LandingPage />} />
           <Route path="/login" element={<Login />} />
 
           {/* Admin dashboard */}
