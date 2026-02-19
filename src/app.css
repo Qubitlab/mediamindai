@@ -22,7 +22,7 @@
 
   --color-txt: #f0ede8;
   --color-txt-dim: #a8a4a0;
-  --color-txt-muted: #6b6770;
+  --color-txt-muted: #a8a3b0;
 
   --animate-fade-up: fade-up 0.8s cubic-bezier(0.2,0.8,0.2,1) both;
   --animate-marquee: marquee 50s linear infinite;
