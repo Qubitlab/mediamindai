@@ -33,7 +33,7 @@ export default function Statement() {
         <div className="p-8 md:p-14 flex flex-col justify-center relative z-10">
           <Reveal delay={200}>
             <p className="text-[15px] md:text-base text-txt-dim leading-relaxed mb-8">
-              Full-stack agency building AI systems, running national campaigns, and deploying Web3 &amp; blockchain technology. We create, we build, we launch.
+              Full-stack agency building AI systems, SaaS platforms, websites, and apps — running Social Media and national campaigns, and deploying Web3 &amp; blockchain technology. We create, we build, we launch.
             </p>
           </Reveal>
 
