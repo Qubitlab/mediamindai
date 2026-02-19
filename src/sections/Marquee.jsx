@@ -16,7 +16,7 @@ export default function Marquee() {
           {doubled.map((name, i) => (
             <span
               key={`${name}-${i}`}
-              className="font-display text-lg font-bold tracking-tight text-txt-muted/40 hover:text-txt-muted/80 transition-opacity cursor-default select-none"
+              className="font-display text-lg font-bold tracking-tight text-txt-muted/70 hover:text-txt-muted transition-opacity cursor-default select-none"
             >
               {name}
             </span>
