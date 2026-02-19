@@ -1,12 +1,16 @@
 export default function Hero() {
   return (
-    <header className="relative z-10 w-full grid grid-cols-1 md:grid-cols-[1fr_1fr_0.8fr] min-h-screen border-b border-white/10">
+    <header className="relative z-10 w-full grid grid-cols-1 md:grid-cols-[1fr_1.2fr_1fr] min-h-screen border-b border-white/10">
 
       {/* ── MEDIA MIND AI watermark ── */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20 overflow-hidden">
         <h1
-          className="font-display font-extrabold tracking-[-0.04em] text-white/[0.04] leading-none select-none whitespace-nowrap"
-          style={{ fontSize: 'clamp(4rem, 14vw, 16rem)' }}
+          className="font-display font-extrabold tracking-[-0.04em] leading-none select-none whitespace-nowrap"
+          style={{
+            fontSize: 'clamp(3rem, 13vw, 16rem)',
+            color: 'rgba(255,255,255,0.25)',
+            mixBlendMode: 'overlay',
+          }}
         >
           MEDIA MIND AI
         </h1>
@@ -22,7 +26,7 @@ export default function Hero() {
         {/* Top spacer */}
         <div className="animate-fade-up opacity-0" style={{ animationDelay: '0.1s' }} />
 
-        {/* Headline */}
+        {/* Headline + description at bottom */}
         <div className="mt-auto relative z-10">
           <div className="animate-fade-up opacity-0" style={{ animationDelay: '0.2s' }}>
             <h1 className="font-display font-extrabold text-[2rem] sm:text-[2.6rem] md:text-[2.4rem] lg:text-[3.2rem] xl:text-[3.6rem] leading-[1.08] tracking-tight text-white mb-8">
@@ -44,40 +48,47 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Col 2: Stats ── */}
-      <div className="hidden md:flex flex-col p-8 lg:p-10 border-r border-white/10 relative justify-between overflow-hidden z-10">
+      {/* ── Col 2: Center Beam Effect ── */}
+      <div className="hidden md:block relative border-r border-white/10 overflow-hidden">
+        {/* Beam on right edge */}
         <div className="beam-line" style={{ right: '-1px', top: 0 }}>
           <div className="beam" style={{ animationDelay: '1.5s' }} />
         </div>
 
-        {/* Top: AI-SEO badge */}
-        <div className="flex justify-center animate-fade-up opacity-0" style={{ animationDelay: '0.3s' }}>
-          <span className="px-4 py-1.5 rounded border border-white/15 bg-white/[0.03] text-[11px] font-mono text-txt-dim tracking-[2px] uppercase">
-            AI-SEO v2.0
-          </span>
-        </div>
+        {/* Wide ambient glow — pulsing */}
+        <div className="absolute inset-0 hero-glow animate-pulse-slow" />
 
-        {/* Stats block */}
-        <div className="flex-1 flex flex-col justify-center space-y-10 animate-fade-up opacity-0" style={{ animationDelay: '0.5s' }}>
-          <div>
-            <div className="text-[3.5rem] lg:text-[4.5rem] font-display font-extrabold text-white tracking-tighter leading-none">
-              10x
-            </div>
-            <div className="text-[10px] text-txt-muted uppercase tracking-[4px] mt-2 font-mono">
-              Visibility
-            </div>
-          </div>
-          <div>
-            <div className="text-[3.5rem] lg:text-[4.5rem] font-display font-extrabold text-white tracking-tighter leading-none">
-              5+
-            </div>
-            <div className="text-[10px] text-txt-muted uppercase tracking-[4px] mt-2 font-mono">
-              Major LLMs
-            </div>
-          </div>
-        </div>
+        {/* Top convergence glow */}
+        <div
+          className="absolute top-0 left-0 right-0 h-2/5"
+          style={{
+            background:
+              'radial-gradient(ellipse 18% 55% at 50% 0%, rgba(124,108,255,0.5), transparent)',
+          }}
+        />
 
-        <div />
+        {/* Bottom convergence glow */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-2/5"
+          style={{
+            background:
+              'radial-gradient(ellipse 18% 55% at 50% 100%, rgba(124,108,255,0.5), transparent)',
+          }}
+        />
+
+        {/* Central vertical beam line with glow */}
+        <div className="hero-beam-line" />
+
+        {/* Dot grid overlay (masked to diamond shape) */}
+        <div className="hero-beam-dots" />
+
+        {/* Animated bright beam drops */}
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[3px] overflow-hidden z-10">
+          <div className="beam-white" />
+        </div>
+        <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] overflow-hidden z-10">
+          <div className="beam-white" style={{ animationDelay: '1.8s' }} />
+        </div>
       </div>
 
       {/* ── Col 3: CTA ── */}
