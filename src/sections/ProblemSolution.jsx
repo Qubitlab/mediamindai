@@ -5,6 +5,7 @@ export default function ProblemSolution() {
     <section className="border-b border-white/10 bg-brand-black">
 
       {/* ── THE PROBLEM ── */}
+      <div className="max-w-[1400px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10 border-b border-white/10">
 
         {/* Left: problem statement */}
@@ -87,8 +88,10 @@ export default function ProblemSolution() {
           </Reveal>
         </div>
       </div>
+      </div>
 
       {/* ── THE SOLUTION ── */}
+      <div className="max-w-[1400px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-white/10">
 
         {/* Left: visual - "Visible Everywhere" */}
@@ -180,6 +183,7 @@ export default function ProblemSolution() {
             </div>
           </Reveal>
         </div>
+      </div>
       </div>
 
     </section>

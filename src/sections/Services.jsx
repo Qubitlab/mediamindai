@@ -132,6 +132,7 @@ const visuals = { chat: ChatVisual, chart: ChartVisual, code: CodeVisual, nodes:
 export default function Services() {
   return (
     <section id="services" className="border-b border-white/10 bg-brand-black">
+      <div className="max-w-[1400px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
 
         {/* Sidebar */}
@@ -192,6 +193,7 @@ export default function Services() {
             )
           })}
         </div>
+      </div>
       </div>
     </section>
   )

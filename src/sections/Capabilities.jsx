@@ -21,6 +21,7 @@ const capabilities = [
 export default function Capabilities() {
   return (
     <section className="border-b border-white/10 bg-brand-black">
+      <div className="max-w-[1400px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
         {capabilities.map((c, i) => (
           <Reveal key={c.title} delay={i * 100}>
@@ -33,6 +34,7 @@ export default function Capabilities() {
             </div>
           </Reveal>
         ))}
+      </div>
       </div>
     </section>
   )

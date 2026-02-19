@@ -6,7 +6,8 @@ export default function Statement() {
       {/* Subtle glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-accent/[0.03] blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] divide-y md:divide-y-0 md:divide-x divide-white/10">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] divide-y md:divide-y-0 md:divide-x divide-white/10">
 
         {/* Left: Big type */}
         <div className="p-8 md:p-14 lg:p-20 flex flex-col justify-center min-h-[360px] md:min-h-[480px] relative z-10">
@@ -79,6 +80,7 @@ export default function Statement() {
               </div>
             </div>
           </Reveal>
+        </div>
         </div>
       </div>
     </section>
