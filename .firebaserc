@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "qxaios"
+  },
+  "targets": {
+    "qxaios": {
+      "hosting": {
+        "landing": ["media-mindai"],
+        "dashboard": ["dashboard-mediamindai"]
+      }
+    }
+  }
+}

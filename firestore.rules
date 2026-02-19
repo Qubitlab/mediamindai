@@ -1,0 +1,42 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users collection - users can read their own profile
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Admin-only collections
+    match /clients/{docId} {
+      allow read, write: if request.auth != null && isAdmin();
+    }
+
+    match /projects/{docId} {
+      allow read: if request.auth != null && (isAdmin() || isProjectClient(docId));
+      allow write: if request.auth != null && isAdmin();
+      // Allow clients to update approval fields
+      allow update: if request.auth != null && isProjectClient(docId)
+        && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['clientApproved', 'clientApprovedAt']);
+    }
+
+    match /invoices/{docId} {
+      allow read: if request.auth != null && (isAdmin() || isInvoiceClient(docId));
+      allow write: if request.auth != null && isAdmin();
+    }
+
+    // Helper functions
+    function isAdmin() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    function isProjectClient(projectId) {
+      return resource.data.clientUserId == request.auth.uid;
+    }
+
+    function isInvoiceClient(invoiceId) {
+      return resource.data.clientUserId == request.auth.uid;
+    }
+  }
+}
