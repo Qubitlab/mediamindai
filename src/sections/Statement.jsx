@@ -64,7 +64,7 @@ export default function Statement() {
           </Reveal>
 
           <Reveal delay={400}>
-            <div className="flex gap-6 mt-10 pt-6 border-t border-brand-border">
+            <div className="flex flex-wrap gap-x-6 gap-y-4 mt-10 pt-6 border-t border-brand-border">
               <div>
                 <div className="text-xl font-display font-bold text-white">25B+</div>
                 <div className="text-[9px] text-txt-muted uppercase tracking-[2px] mt-0.5 font-mono">Views</div>

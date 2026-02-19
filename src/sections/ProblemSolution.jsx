@@ -32,7 +32,7 @@ export default function ProblemSolution() {
 
           {/* Stat callouts */}
           <Reveal delay={200}>
-            <div className="flex gap-8 mt-10 pt-8 border-t border-brand-border">
+            <div className="flex flex-wrap gap-x-8 gap-y-4 mt-10 pt-8 border-t border-brand-border">
               <div>
                 <div className="font-display font-extrabold text-2xl text-tool-coral">40%</div>
                 <div className="text-[10px] text-txt-muted uppercase tracking-[2px] mt-1">AI-First Searches</div>

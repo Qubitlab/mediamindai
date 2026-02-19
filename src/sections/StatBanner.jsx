@@ -18,16 +18,18 @@ export default function StatBanner() {
       {/* Big stat number */}
       <section className="border-b border-white/10 bg-brand-black py-20 md:py-28 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(200,255,0,0.03),transparent_70%)]" />
-        <Reveal>
-          <div className="font-display font-extrabold text-5xl md:text-7xl lg:text-[6.5rem] tracking-tighter text-white leading-none relative z-10">
-            25,037,732,602
-          </div>
-        </Reveal>
-        <Reveal delay={100}>
-          <div className="font-mono text-[12px] tracking-[4px] uppercase text-txt-muted mt-4 relative z-10">
-            Total Content Views — And Counting
-          </div>
-        </Reveal>
+        <div className="max-w-6xl mx-auto px-6 md:px-8">
+          <Reveal>
+            <div className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-[6.5rem] tracking-tighter text-white leading-none relative z-10">
+              25,037,732,602
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="font-mono text-[12px] tracking-[4px] uppercase text-txt-muted mt-4 relative z-10">
+              Total Content Views — And Counting
+            </div>
+          </Reveal>
+        </div>
       </section>
     </>
   )
