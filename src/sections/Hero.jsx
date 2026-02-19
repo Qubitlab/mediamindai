@@ -60,7 +60,7 @@ export default function Hero() {
 
         {/* Headline */}
         <div className="animate-fade-up opacity-0 max-w-3xl" style={{ animationDelay: '0.2s' }}>
-          <h2 className="font-display font-extrabold text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[3rem] leading-[1.12] tracking-tight text-white mb-6 text-justify [text-wrap:balance]">
+          <h2 className="font-display font-extrabold text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[3rem] leading-[1.12] tracking-tight text-white mb-6 text-center [text-wrap:balance]">
             Be Visible in{' '}
             <span className="relative inline-block text-[#7c6cff]">
               ChatGPT
