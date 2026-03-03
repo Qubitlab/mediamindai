@@ -38,7 +38,7 @@ const tools = [
     desc: 'Full AI automation platform. Content distribution to intelligence reporting to strategic action execution — running autonomously.',
     features: ['Automated brand monitoring', 'Continuous intelligence reporting', 'Strategic decision execution', 'Full FeedSync + TrustGraph integration'],
     color: 'tool-coral',
-    logo: '/logo-light.png',
+    logo: '/quantumxai-logo-white.png',
     gradient: 'from-tool-coral',
   },
 ]
