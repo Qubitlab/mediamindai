@@ -8,7 +8,7 @@ const tools = [
     desc: 'Multi-platform content distribution engine. Push content across all 6 major AI platforms and track visibility in real-time.',
     features: ['6-platform simultaneous distribution', 'Automated content scheduling', 'Real-time performance analytics', 'AI-optimized content suggestions'],
     color: 'tool-blue',
-    logo: '/feedsyncai.png',
+    logo: '/logo-light.png',
     gradient: 'from-tool-blue',
   },
   {
@@ -29,6 +29,7 @@ const tools = [
     features: ['Sentinel V-Verify vision analysis', 'Blockchain timestamping on Polygon', 'Trust badges & certificates', 'Deepfake detection safeguards'],
     color: 'tool-purple',
     logo: '/V-verify-logo.png',
+    logoClass: 'h-14',
     gradient: 'from-tool-purple',
   },
   {
@@ -75,7 +76,7 @@ export default function TechShowcase() {
 
                 {/* Header row */}
                 <div className="flex justify-between items-start mb-6">
-                  <img src={t.logo} alt={t.name} className="h-10 w-auto object-contain" />
+                  <img src={t.logo} alt={t.name} className={`${t.logoClass || 'h-10'} w-auto object-contain`} />
                   <span className="font-mono text-[10px] tracking-wider uppercase px-3 py-1 border border-brand-border rounded-full text-txt-muted">
                     Live
                   </span>
