@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled
         ? 'bg-brand-black/90 backdrop-blur-2xl border-b border-white/5 py-3'
-        : 'py-4'
+        : 'bg-brand-black/70 backdrop-blur-xl py-4'
     }`}>
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
 
@@ -33,7 +33,7 @@ export default function Navbar() {
             alt="MediaMind AI"
             className="h-12 w-auto object-contain"
           />
-          <span className="font-display text-lg font-bold text-white tracking-tight">
+          <span className="hidden sm:inline font-display text-lg font-bold text-white tracking-tight">
             Media Mind AI
           </span>
         </a>

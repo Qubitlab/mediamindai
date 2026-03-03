@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <header className="relative z-10 w-full min-h-screen border-b border-white/10">
+    <header className="relative w-full min-h-screen border-b border-white/10">
 
       {/* ── Background glow (behind everything) ── */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -51,16 +51,16 @@ export default function Hero() {
       </div>
 
       {/* ── Centered content ── */}
-      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center px-6 md:px-8 text-center">
+      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center pt-20 pb-10 px-4 sm:px-6 md:px-8 text-center">
 
         {/* Big MEDIA MIND AI title */}
-        <h1 className="text-huge font-display font-bold tracking-[-0.04em] leading-none select-none text-white opacity-90 mix-blend-overlay mb-6 md:mb-8">
+        <h1 className="text-huge font-display font-bold tracking-[-0.04em] leading-none select-none text-white opacity-90 mix-blend-overlay mb-4 sm:mb-6 md:mb-8">
           MEDIA MIND AI
         </h1>
 
         {/* Headline */}
-        <div className="animate-fade-up opacity-0 max-w-3xl" style={{ animationDelay: '0.2s' }}>
-          <h2 className="font-display font-extrabold text-[1.6rem] sm:text-[2rem] md:text-[2.4rem] lg:text-[3rem] leading-[1.12] tracking-tight text-white mb-6 text-center [text-wrap:balance]">
+        <div className="animate-fade-up opacity-0 max-w-3xl px-2" style={{ animationDelay: '0.2s' }}>
+          <h2 className="font-display font-extrabold text-[1.25rem] sm:text-[1.6rem] md:text-[2.4rem] lg:text-[3rem] leading-[1.15] tracking-tight text-white mb-4 sm:mb-6 text-center [text-wrap:balance]">
             Be Visible in{' '}
             <span className="relative inline-block text-[#7c6cff]">
               ChatGPT
@@ -73,8 +73,8 @@ export default function Hero() {
         </div>
 
         {/* Description */}
-        <div className="animate-fade-up opacity-0 max-w-lg" style={{ animationDelay: '0.45s' }}>
-          <p className="text-sm md:text-[15px] leading-relaxed text-txt-dim font-light">
+        <div className="animate-fade-up opacity-0 max-w-lg px-2" style={{ animationDelay: '0.45s' }}>
+          <p className="text-xs sm:text-sm md:text-[15px] leading-relaxed text-txt-dim font-light">
             First Web3 agency combining traditional Social Media with AI
             search optimization. Get mentioned by AI Platforms and featured
             in top-tier media.
@@ -82,7 +82,7 @@ export default function Hero() {
         </div>
 
         {/* CTA */}
-        <div className="animate-fade-up opacity-0 mt-10" style={{ animationDelay: '0.65s' }}>
+        <div className="animate-fade-up opacity-0 mt-6 sm:mt-10" style={{ animationDelay: '0.65s' }}>
           <a href="#contact" className="group relative inline-block">
             <div className="absolute -inset-[1px] rounded-md bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0deg,transparent_300deg,#7c6cff_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 hero-border-spin blur-[0.5px]" />
             <div className="relative bg-brand-surface border border-[#7c6cff]/20 text-txt-dim px-6 py-3 rounded-md flex items-center gap-3 shadow-lg shadow-[#7c6cff]/5 group-hover:text-[#7c6cff] group-hover:border-[#7c6cff]/50 transition-all duration-300">
