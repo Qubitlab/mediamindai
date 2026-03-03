@@ -22,8 +22,8 @@ export default function CTA() {
                   info@mediamindai.com
                 </span>
               </a>
-              <a href="tel:7602584874" className="font-display text-[13px] font-bold uppercase tracking-wider px-8 py-4 border border-brand-border-light text-txt-dim rounded-full hover:border-white/30 hover:text-white transition-all">
-                (760) 258-4874
+              <a href="tel:6297776155‬" className="font-display text-[13px] font-bold uppercase tracking-wider px-8 py-4 border border-brand-border-light text-txt-dim rounded-full hover:border-white/30 hover:text-white transition-all">
+                (629) 777-6155‬
               </a>
             </div>
           </div>
