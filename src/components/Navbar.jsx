@@ -27,12 +27,15 @@ export default function Navbar() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5">
+        <a href="#" className="flex items-center gap-3">
           <img
             src="/Mediamindai-white-logo.jpeg"
             alt="MediaMind AI"
-            className="h-8 w-auto object-contain"
+            className="h-12 w-auto object-contain"
           />
+          <span className="font-display text-lg font-bold text-white tracking-tight">
+            Media Mind AI
+          </span>
         </a>
 
         {/* Desktop links */}
