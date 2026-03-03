@@ -28,18 +28,11 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5">
-          {/* Icon mark */}
-          <div className="relative w-7 h-7 flex items-center justify-center">
-            <svg viewBox="0 0 28 28" fill="none" className="w-full h-full">
-              <rect x="1" y="1" width="12" height="12" rx="2" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-              <rect x="15" y="1" width="12" height="12" rx="2" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-              <rect x="1" y="15" width="12" height="12" rx="2" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-              <circle cx="21" cy="21" r="5" stroke="#7c6cff" strokeWidth="1.5" />
-            </svg>
-          </div>
-          <span className="font-mono text-[12px] font-medium tracking-[2px] uppercase text-txt-dim">
-            MEDIAMIND AI
-          </span>
+          <img
+            src="/Mediamindai-white-logo.jpeg"
+            alt="MediaMind AI"
+            className="h-8 w-auto object-contain"
+          />
         </a>
 
         {/* Desktop links */}
