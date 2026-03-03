@@ -29,7 +29,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <img
-            src="/Mediamindai-white-logo.jpeg"
+            src="/New-Media Mindai-logo.png"
             alt="MediaMind AI"
             className="h-12 w-auto object-contain"
           />
