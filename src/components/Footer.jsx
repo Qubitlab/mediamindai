@@ -11,7 +11,7 @@ export default function Footer() {
               Media Minds AI
             </div>
             <p className="text-sm text-txt-muted leading-relaxed max-w-[260px] mb-6">
-              Full-stack agency specializing in AI systems, national campaigns, Web3 technology, and brand intelligence.
+              Full-stack agency specializing in AI systems, social media, technology development, national campaigns, Web3 technology, and brand intelligence.
             </p>
             <div className="font-mono text-[9px] tracking-[2px] uppercase text-txt-muted pt-4 border-t border-brand-border">
               A Division of The QuantumX Project
@@ -22,7 +22,7 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-[10px] tracking-[2px] uppercase text-txt-muted mb-5">Services</h4>
             <ul className="space-y-2.5">
-              {['Strategy & Consulting', 'Campaigns & Content', 'AI Development', 'Web3 & Blockchain', 'E-Commerce'].map(s => (
+              {['Strategy & Consulting', 'Campaigns & Content', 'AI & Tech Development', 'Web3 & Blockchain', 'E-Commerce'].map(s => (
                 <li key={s}><a href="#services" className="text-[13px] text-txt-dim hover:text-white transition-colors">{s}</a></li>
               ))}
             </ul>
