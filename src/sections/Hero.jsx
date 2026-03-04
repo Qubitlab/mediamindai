@@ -81,8 +81,15 @@ export default function Hero() {
           </p>
         </div>
 
+        {/* Trust tag */}
+        <div className="animate-fade-up opacity-0 mt-5 sm:mt-7" style={{ animationDelay: '0.55s' }}>
+          <span className="inline-block text-[11px] sm:text-xs tracking-wide text-txt-muted/70 border border-white/10 rounded-full px-4 py-1.5 backdrop-blur-sm">
+            AI won&apos;t reference what it doesn&apos;t trust.
+          </span>
+        </div>
+
         {/* CTA */}
-        <div className="animate-fade-up opacity-0 mt-6 sm:mt-10" style={{ animationDelay: '0.65s' }}>
+        <div className="animate-fade-up opacity-0 mt-4 sm:mt-5" style={{ animationDelay: '0.65s' }}>
           <a href="#contact" className="group relative inline-block">
             <div className="absolute -inset-[1px] rounded-md bg-[conic-gradient(from_0deg_at_50%_50%,transparent_0deg,transparent_300deg,#7c6cff_360deg)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 hero-border-spin blur-[0.5px]" />
             <div className="relative bg-brand-surface border border-[#7c6cff]/20 text-txt-dim px-6 py-3 rounded-md flex items-center gap-3 shadow-lg shadow-[#7c6cff]/5 group-hover:text-[#7c6cff] group-hover:border-[#7c6cff]/50 transition-all duration-300">
