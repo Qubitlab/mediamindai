@@ -27,7 +27,7 @@ export default function ProblemSolution() {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-[15px] md:text-base text-txt-dim leading-relaxed max-w-lg">
-              <span className="text-white font-semibold">40% of users</span> now search via AI assistants. Your competitors are invisible to ChatGPT, Gemini, Grok, Claude, and Perplexity — and media coverage alone doesn't guarantee AI visibility.
+              <span className="text-white font-semibold">40% of users</span> now search via AI assistants. Your competitors are invisible to ChatGPT, Gemini, Grok, Claude, and Perplexity, and media coverage alone doesn&apos;t guarantee AI visibility. We built infrastructure that allows AI systems to verify, trust, and reference brands. <span className="text-white font-semibold">The Trust Layer for the AI Internet.</span> With <span className="text-tool-coral font-semibold">AI Trust Protocol™ (AITP™)</span>
             </p>
           </Reveal>
 
