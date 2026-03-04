@@ -156,30 +156,20 @@ export default function ProblemSolution() {
           </Reveal>
           <Reveal delay={100}>
             <p className="text-[15px] md:text-base text-txt-dim leading-relaxed max-w-lg mb-6">
-              We optimize your brand for both <span className="text-white font-semibold">AI search engines AND traditional media</span>. A Social Media + LLM optimization strategy ensuring visibility everywhere your audience searches.
+              AI won&apos;t reference what it doesn&apos;t trust.
             </p>
+            <ul className="space-y-2 max-w-lg mb-6">
+              {['Verify your identity.', 'Build authority.', 'Be discovered everywhere AI looks.'].map(item => (
+                <li key={item} className="flex items-center gap-3 text-[15px] md:text-base text-txt-dim leading-relaxed">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </Reveal>
           <Reveal delay={150}>
-            <p className="text-[15px] md:text-base text-txt-dim leading-relaxed max-w-lg">
-              Get mentioned by AI assistants. Featured in top-tier media. We fuse cutting-edge AI integration with premium development — elevating your business with autonomous systems.
-            </p>
-          </Reveal>
-
-          {/* Checkmarks */}
-          <Reveal delay={250}>
-            <div className="flex flex-wrap gap-x-6 gap-y-2 mt-10 pt-8 border-t border-brand-border">
-              {[
-                'AI Platform Visibility',
-                'Traditional Media Coverage',
-                'Social Media Strategy',
-                'Web3 Verification',
-                'Content Distribution',
-                'Brand Intelligence',
-              ].map(item => (
-                <div key={item} className="flex items-center gap-2 text-[12px] text-txt-dim">
-                  <span className="text-accent text-[10px]">✓</span> {item}
-                </div>
-              ))}
+            <div className="mt-2 pt-6 border-t border-brand-border">
+              <span className="font-display font-extrabold text-xl md:text-2xl text-accent tracking-tight">The AI Trust Layer</span>
             </div>
           </Reveal>
         </div>
