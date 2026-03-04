@@ -150,15 +150,22 @@ export default function ProblemSolution() {
               Our Solution
             </div>
             <h2 className="font-display font-extrabold text-3xl md:text-4xl lg:text-[2.8rem] tracking-tight text-white leading-[1.08] mb-6">
-              Dual-Channel<br />
-              <span className="text-accent">Optimization.</span>
+              AI Trust<br />
+              <span className="text-accent">Infrastructure.</span>
             </h2>
           </Reveal>
           <Reveal delay={100}>
             <p className="text-[15px] md:text-base text-txt-dim leading-relaxed max-w-lg mb-6">
               AI won&apos;t reference what it doesn&apos;t trust.
             </p>
-            <ul className="space-y-2 max-w-lg mb-6">
+            <p className="text-[15px] md:text-base text-txt-dim leading-relaxed max-w-lg mb-8">
+              <span className="text-white font-semibold">Verification</span> creates trust.{' '}
+              <span className="text-white font-semibold">Trust</span> creates authority.{' '}
+              <span className="text-white font-semibold">Authority</span> creates visibility.
+            </p>
+          </Reveal>
+          <Reveal delay={150}>
+            <ul className="space-y-3 max-w-lg mb-6">
               {['Verify your identity.', 'Build authority.', 'Be discovered everywhere AI looks.'].map(item => (
                 <li key={item} className="flex items-center gap-3 text-[15px] md:text-base text-txt-dim leading-relaxed">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
@@ -167,7 +174,7 @@ export default function ProblemSolution() {
               ))}
             </ul>
           </Reveal>
-          <Reveal delay={150}>
+          <Reveal delay={200}>
             <div className="mt-2 pt-6 border-t border-brand-border">
               <span className="font-display font-extrabold text-xl md:text-2xl text-accent tracking-tight">The AI Trust Layer</span>
             </div>
