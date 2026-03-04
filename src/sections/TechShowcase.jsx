@@ -5,8 +5,9 @@ const tools = [
     name: 'FeedSync AI',
     domain: 'feedsyncai.com',
     url: 'https://feedsyncai.com',
-    desc: 'Multi-platform content distribution engine. Push content across all 6 major AI platforms and track visibility in real-time.',
-    features: ['6-platform simultaneous distribution', 'Automated content scheduling', 'Real-time performance analytics', 'AI-optimized content suggestions'],
+    desc: 'Push your brand into AI answers. FeedSyncAI distributes trusted authority signals so AI models can discover, reference, and surface your brand in responses.',
+    tagline: 'Be Referenced by AI.',
+    features: ['AI model discovery signals', 'Entity distribution networks', 'AI knowledge ingestion', 'AI visibility optimization'],
     color: 'tool-blue',
     logo: '/logo-light.png',
     gradient: 'from-tool-blue',
@@ -97,15 +98,27 @@ export default function TechShowcase() {
                   ))}
                 </ul>
 
+                {/* Tagline */}
+                {t.tagline && (
+                  <p className={`text-[11px] font-mono tracking-wider uppercase text-${t.color} mb-6`}>{t.tagline}</p>
+                )}
+
                 {/* Link */}
                 <a
                   href={t.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`font-display text-[12px] font-bold uppercase tracking-wider text-${t.color} inline-flex items-center gap-2 group-hover:gap-4 transition-all`}
+                  className={`font-display text-[12px] font-bold uppercase tracking-wider text-${t.color} inline-flex items-center gap-2 group-hover:gap-4 transition-all mb-6`}
                 >
                   Visit {t.name} →
                 </a>
+
+                {/* Trust tagline */}
+                <div className="pt-4 border-t border-brand-border">
+                  <p className="font-mono text-[10px] tracking-[2px] uppercase text-txt-muted italic">
+                    AI won&apos;t reference what it doesn&apos;t trust.
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}
