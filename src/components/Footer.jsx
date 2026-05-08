@@ -32,10 +32,11 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-[10px] tracking-[2px] uppercase text-txt-muted mb-5">Technology</h4>
             <ul className="space-y-2.5">
+              <li><a href="https://veraregistry.web.app" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">VERA Registry</a></li>
+              <li><a href="https://vverify.ai" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">V-Verify</a></li>
+              <li><a href="https://veragraph.ai" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">VeraGraph</a></li>
               <li><a href="https://feedsyncai.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">FeedSync AI</a></li>
-              <li><a href="https://trustgraph.space" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">TrustGraph</a></li>
-              <li><a href="https://trustverify.space" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">TrustVerify</a></li>
-              <li><a href="https://qxai.space" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">QXAI</a></li>
+              <li><a href="https://qxai-agent.web.app" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">QXAI Agent</a></li>
             </ul>
           </div>
 
