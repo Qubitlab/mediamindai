@@ -2,6 +2,19 @@ import { Reveal } from '../components/Reveal'
 
 const tools = [
   {
+    name: 'VERA Registry',
+    domain: 'veraregistry.web.app',
+    url: 'https://veraregistry.web.app',
+    desc: 'The world\'s first public registry of what AI says about brands, public figures, products, and entities — and the authority that issues verified records anchored to QUBIT Blockchain®.',
+    tagline: 'The Registry of Truth for the AI Era.',
+    features: ['Public AI-knowledge registry', 'Verified Evidence Registry & Authority', 'On-chain proof anchoring (QUBIT)', 'Brand claim & reputation control'],
+    color: 'tool-vera',
+    logo: '/Vera-white-logo.png',
+    logoClass: 'h-12',
+    gradient: 'from-tool-vera',
+    featured: true,
+  },
+  {
     name: 'FeedSync AI',
     domain: 'feedsyncai.com',
     url: 'https://feedsyncai.com',
@@ -20,7 +33,7 @@ const tools = [
     tagline: 'Machine-Readable Authority.',
     features: ['Structured credibility signals', 'Entity relationship graphs', 'Reputation authority mapping', 'AI-readable trust infrastructure'],
     color: 'tool-teal',
-    logo: '/trustgraph_logo.png',
+    logo: '/Veragraph-white.png',
     gradient: 'from-tool-teal',
   },
   {
@@ -30,10 +43,10 @@ const tools = [
     desc: 'Identity verification for the AI internet. Before AI can trust your brand, it must know you are real. V-Verify authenticates identity, ownership, and credibility so AI systems can recognize verified entities.',
     tagline: 'Verified by Humans. Trusted by Machines.',
     features: ['Verify brand identity', 'Authenticate content ownership', 'Create machine-readable trust signals', 'Establish credibility for AI systems'],
-    color: 'tool-purple',
-    logo: '/V-verify-logo.png',
+    color: 'tool-clay',
+    logo: '/new-v-verify-white.png',
     logoClass: 'h-14',
-    gradient: 'from-tool-purple',
+    gradient: 'from-tool-clay',
   },
   {
     name: 'QXAI Agent',
@@ -72,7 +85,7 @@ export default function TechShowcase() {
         {/* Tool grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {tools.map((t, i) => (
-            <Reveal key={t.name} delay={i * 80}>
+            <Reveal key={t.name} delay={i * 80} className={t.featured ? 'md:col-span-2' : ''}>
               <div className="group bg-brand-surface border border-brand-border rounded-2xl p-10 relative overflow-hidden hover:border-brand-border-light hover:-translate-y-1 transition-all duration-500 hover:shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
 
                 {/* Top accent line */}
