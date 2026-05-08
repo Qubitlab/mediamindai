@@ -36,7 +36,7 @@ export default function Footer() {
               <li><a href="https://vverify.ai" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">V-Verify</a></li>
               <li><a href="https://veragraph.ai" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">VeraGraph</a></li>
               <li><a href="https://feedsyncai.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">FeedSync AI</a></li>
-              <li><a href="https://qxai-agent.web.app" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">QXAI Agent</a></li>
+              <li><a href="https://qxaiagent.com" target="_blank" rel="noopener noreferrer" className="text-[13px] text-txt-dim hover:text-white transition-colors">QXAI Agent</a></li>
             </ul>
           </div>
 

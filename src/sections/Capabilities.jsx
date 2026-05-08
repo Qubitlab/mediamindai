@@ -1,20 +1,21 @@
 import { Reveal } from '../components/Reveal'
+import { Target, Zap, BarChart3 } from 'lucide-react'
 
 const capabilities = [
   {
-    icon: '⚡',
-    title: 'Branding & Visual Design',
-    desc: 'Visual identity systems, UI/UX, presentation design, and creative direction that makes brands unforgettable across every touchpoint.',
+    Icon: Target,
+    title: 'Strategy',
+    desc: 'Brand positioning, AI visibility audits, market intelligence, and go-to-market plans for brands navigating AI-driven discovery.',
   },
   {
-    icon: '🛒',
-    title: 'E-Commerce & SaaS',
-    desc: 'End-to-end e-commerce builds, payment integrations with Stripe, SaaS platform development, and technology infrastructure that scales.',
+    Icon: Zap,
+    title: 'Technology',
+    desc: 'Custom AI platforms, autonomous agents, Web3 & blockchain infrastructure, and full-stack production deployment — built and shipped end to end.',
   },
   {
-    icon: '🎯',
-    title: 'Social Media & Distribution',
-    desc: 'Platform strategy, content calendars, community management, and cross-platform distribution optimized for visibility and engagement.',
+    Icon: BarChart3,
+    title: 'Intelligence',
+    desc: 'Brand monitoring across AI platforms, sentiment analysis, competitive reports, and continuous reputation signals delivered as actionable insights.',
   },
 ]
 
@@ -26,8 +27,8 @@ export default function Capabilities() {
         {capabilities.map((c, i) => (
           <Reveal key={c.title} delay={i * 100}>
             <div className="group p-10 hover:bg-white/[0.02] transition-colors">
-              <div className="w-12 h-12 bg-brand-surface border border-white/10 rounded-xl flex items-center justify-center text-xl mb-6 group-hover:border-accent/40 transition-colors">
-                {c.icon}
+              <div className="w-12 h-12 bg-brand-surface border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:border-accent/40 transition-colors text-accent">
+                <c.Icon size={22} strokeWidth={1.6} />
               </div>
               <h3 className="text-white font-display font-semibold text-lg mb-3">{c.title}</h3>
               <p className="text-sm text-txt-muted leading-relaxed">{c.desc}</p>

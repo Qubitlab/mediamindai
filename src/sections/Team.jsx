@@ -1,4 +1,5 @@
 import { Reveal } from '../components/Reveal'
+import { User } from 'lucide-react'
 
 const team = [
   { name: 'Larry', role: 'Founder & CEO', desc: 'Built four proprietary AI platforms from the ground up. AI systems architecture, autonomous agents, quantum technologies, cybersecurity, Web3 & blockchain, full-stack development, and national media & social media strategy. 10+ billion views and counting.', linkedin: 'https://www.linkedin.com/in/castrolarry/' },
@@ -30,8 +31,8 @@ export default function Team() {
           {team.map((t, i) => (
             <Reveal key={t.name} delay={i * 80}>
               <div className="bg-brand-surface border border-brand-border rounded-2xl p-10 text-center hover:border-brand-border-light transition-all">
-                <div className="w-20 h-20 bg-brand-surface2 border border-brand-border rounded-full mx-auto mb-6 flex items-center justify-center text-3xl">
-                  👤
+                <div className="w-20 h-20 bg-brand-surface2 border border-brand-border rounded-full mx-auto mb-6 flex items-center justify-center text-txt-muted">
+                  <User size={32} strokeWidth={1.4} />
                 </div>
                 <h4 className="font-display font-bold text-xl text-white">{t.name}</h4>
                 <div className="text-accent text-[13px] font-medium mb-3">{t.role}</div>

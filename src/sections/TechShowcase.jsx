@@ -9,10 +9,26 @@ const tools = [
     tagline: 'The Registry of Truth for the AI Era.',
     features: ['Public AI-knowledge registry', 'Verified Evidence Registry & Authority', 'On-chain proof anchoring (QUBIT)', 'Brand claim & reputation control'],
     color: 'tool-vera',
-    logo: '/Vera-white-logo.png',
-    logoClass: 'h-12',
+    logo: '/new-vera-white-design.png',
+    logoClass: 'h-14 sm:h-20 md:h-24',
     gradient: 'from-tool-vera',
     featured: true,
+    subSurfaces: [
+      {
+        name: 'VERA AI Newswire',
+        domain: 'veraregistry-news.web.app',
+        url: 'https://veraregistry-news.web.app',
+        desc: 'Editorial newswire — every story anchored to QUBIT Blockchain®',
+        eyebrow: 'NEWS',
+      },
+      {
+        name: 'VERA Channels',
+        domain: 'veraregistry-news.web.app/channels',
+        url: 'https://veraregistry-news.web.app/channels',
+        desc: 'Verified discussion by domain — Reddit-style communities with AI-agent autoposts',
+        eyebrow: 'COMMUNITY',
+      },
+    ],
   },
   {
     name: 'FeedSync AI',
@@ -50,13 +66,14 @@ const tools = [
   },
   {
     name: 'QXAI Agent',
-    domain: 'qxai-agent.web.app',
-    url: 'https://qxai-agent.web.app',
+    domain: 'qxaiagent.com',
+    url: 'https://qxaiagent.com',
     desc: 'The decentralized AI operating layer for trusted intelligence. QXAI orchestrates verification, authority, and distribution across the entire trust stack — no single point of control, no single point of failure.',
     tagline: 'Decentralized Intelligence. Verified Trust.',
     features: ['Decentralized orchestration of the AI trust stack', 'AI-powered intelligence & content creation', 'Autonomous decision execution', 'Unified trust infrastructure API'],
     color: 'tool-coral',
-    logo: '/quantumxai-logo-white.png',
+    logo: '/qxai-agent-logo-white.png',
+    logoClass: 'h-12',
     gradient: 'from-tool-coral',
   },
 ]
@@ -113,6 +130,39 @@ export default function TechShowcase() {
                     </li>
                   ))}
                 </ul>
+
+                {/* Sub-surfaces (flagship only — News + Channels for VERA) */}
+                {t.subSurfaces && (
+                  <div className="mb-8">
+                    <div className={`font-mono text-[10px] tracking-[2px] uppercase text-${t.color} mb-4 flex items-center gap-2`}>
+                      <span className={`inline-block w-6 h-px bg-${t.color}`} />
+                      Featured surfaces
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {t.subSurfaces.map((s) => (
+                        <a
+                          key={s.url}
+                          href={s.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`group/sub block bg-brand-bg/50 border border-brand-border rounded-xl p-5 hover:border-${t.color}/50 hover:bg-brand-bg/70 transition-all duration-300`}
+                        >
+                          <div className="flex items-center justify-between mb-3">
+                            <span className={`font-mono text-[9px] tracking-[2px] uppercase text-${t.color} font-semibold`}>
+                              {s.eyebrow}
+                            </span>
+                            <span className="font-mono text-[14px] text-txt-muted group-hover/sub:text-white group-hover/sub:translate-x-0.5 transition-all">→</span>
+                          </div>
+                          <div className="font-display text-[18px] font-bold text-white mb-1.5 leading-tight">
+                            {s.name}
+                          </div>
+                          <div className="font-mono text-[10px] text-txt-muted mb-3 truncate">{s.domain}</div>
+                          <p className="text-[12px] text-txt-dim leading-relaxed">{s.desc}</p>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Tagline */}
                 {t.tagline && (

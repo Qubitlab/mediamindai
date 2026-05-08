@@ -53,8 +53,9 @@ export default function Hero() {
       {/* ── Centered content ── */}
       <div className="relative z-20 min-h-screen flex flex-col items-center justify-center pt-20 pb-10 px-4 sm:px-6 md:px-8 text-center">
 
-        {/* Big MEDIA MIND AI title */}
-        <h1 className="text-huge font-display font-bold tracking-[-0.04em] leading-none select-none text-white opacity-90 mix-blend-overlay mb-4 sm:mb-6 md:mb-8">
+        {/* MEDIA MIND AI — primary brand mark. A page that sells visibility
+            should not hide its own name. Full white, prominent, intentional. */}
+        <h1 className="text-huge font-display font-bold tracking-[-0.04em] leading-none select-none mb-4 sm:mb-6 md:mb-8 text-white">
           MEDIA MIND AI
         </h1>
 

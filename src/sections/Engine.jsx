@@ -1,11 +1,12 @@
 import { Reveal } from '../components/Reveal'
+import { Search, Zap, BrainCircuit, Link as LinkIcon, ClipboardList } from 'lucide-react'
 
 const steps = [
-  { icon: '🔍', title: 'Input', desc: 'Brand or entity submitted for analysis' },
-  { icon: '⚡', title: 'Query', desc: 'Parallel queries to 6 AI platforms' },
-  { icon: '🧮', title: 'Analyze', desc: 'NLP extraction, sentiment, competitive data' },
-  { icon: '⛓️', title: 'Verify', desc: 'Blockchain timestamping on Polygon' },
-  { icon: '📋', title: 'Deliver', desc: 'Reports, scores, badges, strategic actions' },
+  { Icon: Search,        title: 'Input',   desc: 'Brand or entity submitted for analysis' },
+  { Icon: Zap,           title: 'Query',   desc: 'Parallel queries to 6 AI platforms' },
+  { Icon: BrainCircuit,  title: 'Analyze', desc: 'NLP extraction, sentiment, competitive data' },
+  { Icon: LinkIcon,      title: 'Verify',  desc: 'Blockchain timestamping on Polygon' },
+  { Icon: ClipboardList, title: 'Deliver', desc: 'Reports, scores, badges, strategic actions' },
 ]
 
 const platforms = ['ChatGPT', 'Claude', 'Gemini', 'Grok', 'Perplexity', 'DeepSeek']
@@ -36,7 +37,9 @@ export default function Engine() {
               {steps.map((s, i) => (
                 <Reveal key={s.title} delay={i * 80}>
                   <div className="bg-white/[0.02] border border-brand-border rounded-2xl p-6 text-center hover:border-brand-border-light transition-colors">
-                    <div className="text-2xl mb-3">{s.icon}</div>
+                    <div className="flex justify-center mb-3 text-accent">
+                      <s.Icon size={24} strokeWidth={1.6} />
+                    </div>
                     <h4 className="font-display font-bold text-sm text-white mb-1">{s.title}</h4>
                     <p className="text-[11px] text-txt-muted leading-snug">{s.desc}</p>
                   </div>

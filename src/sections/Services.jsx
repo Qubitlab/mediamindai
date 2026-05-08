@@ -1,4 +1,5 @@
 import { Reveal } from '../components/Reveal'
+import { FileText, Link as LinkIcon, Lock, Check } from 'lucide-react'
 
 const services = [
   {
@@ -106,21 +107,21 @@ function NodesVisual() {
         <line x1="80%" y1="50%" x2="50%" y2="82%" />
       </svg>
       {[
-        { top: '18%', left: '50%', icon: '📄', accent: false },
-        { top: '50%', left: '20%', icon: '⛓️', accent: false },
-        { top: '50%', left: '80%', icon: '🔐', accent: false },
-        { top: '82%', left: '50%', icon: '✓', accent: true },
+        { top: '18%', left: '50%', Icon: FileText,  accent: false },
+        { top: '50%', left: '20%', Icon: LinkIcon,  accent: false },
+        { top: '50%', left: '80%', Icon: Lock,      accent: false },
+        { top: '82%', left: '50%', Icon: Check,     accent: true  },
       ].map((n, i) => (
         <div
           key={i}
-          className={`absolute -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-lg flex items-center justify-center z-10 text-sm transition-all group-hover:scale-110 ${
+          className={`absolute -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-lg flex items-center justify-center z-10 transition-all group-hover:scale-110 ${
             n.accent
-              ? 'bg-accent/20 border border-accent/50 shadow-[0_0_20px_rgba(200,255,0,0.2)]'
-              : 'bg-brand-surface2 border border-white/15'
+              ? 'bg-accent/20 border border-accent/50 shadow-[0_0_20px_rgba(200,255,0,0.2)] text-accent'
+              : 'bg-brand-surface2 border border-white/15 text-txt-dim'
           }`}
           style={{ top: n.top, left: n.left, transitionDelay: `${i * 80}ms` }}
         >
-          {n.icon}
+          <n.Icon size={16} strokeWidth={1.6} />
         </div>
       ))}
     </div>

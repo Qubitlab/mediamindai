@@ -7,7 +7,7 @@ export default function Marquee() {
   const doubled = [...items, ...items]
 
   return (
-    <section className="border-b border-white/10 bg-brand-black relative overflow-hidden py-10">
+    <section className="border-b border-white/10 bg-brand-black relative overflow-hidden py-5">
       <div className="absolute left-0 inset-y-0 w-32 bg-gradient-to-r from-brand-black to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 inset-y-0 w-32 bg-gradient-to-l from-brand-black to-transparent z-10 pointer-events-none" />
 
