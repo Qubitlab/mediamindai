@@ -76,9 +76,11 @@ export default function Hero() {
         {/* Description */}
         <div className="animate-fade-up opacity-0 max-w-lg px-2" style={{ animationDelay: '0.45s' }}>
           <p className="text-xs sm:text-sm md:text-[15px] leading-relaxed text-txt-dim font-light">
-            First Web3 agency combining traditional Social Media with AI
-            search optimization. Get mentioned by AI Platforms and featured
-            in top-tier media.
+            Full-stack agency. Social media. Web &amp; app development. National
+            campaigns. AI systems. Web3. <span className="text-white">Generative Engine Optimization</span> &amp; <span className="text-white">Answer Engine Optimization</span>. We create, we build, we launch.{' '}
+            <span style={{ fontWeight: 600, color: '#c8ff00', letterSpacing: '0.01em' }}>
+              GEO and AEO Control.
+            </span>
           </p>
         </div>
 

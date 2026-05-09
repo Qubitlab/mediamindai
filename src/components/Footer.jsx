@@ -55,9 +55,60 @@ export default function Footer() {
           <div>
             <h4 className="font-mono text-[10px] tracking-[2px] uppercase text-txt-muted mb-5">Connect</h4>
             <ul className="space-y-2.5">
-              {['Twitter / X', 'LinkedIn', 'YouTube', 'Instagram'].map(s => (
-                <li key={s}><a href="#" className="text-[13px] text-txt-dim hover:text-white transition-colors">{s}</a></li>
-              ))}
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/media-mind-ai-group/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] text-txt-dim hover:text-white transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/mediamindsai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] text-txt-dim hover:text-white transition-colors"
+                >
+                  X &middot; @mediamindsai
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@qxverse"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[13px] text-txt-dim hover:text-white transition-colors"
+                >
+                  TikTok &middot; @qxverse
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:hello@mediamindai.com"
+                  className="text-[13px] text-txt-dim hover:text-white transition-colors"
+                >
+                  hello@mediamindai.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:press@mediamindai.com"
+                  className="text-[13px] text-txt-dim hover:text-white transition-colors"
+                >
+                  press@mediamindai.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+16297776155"
+                  className="text-[13px] text-txt-dim hover:text-white transition-colors"
+                >
+                  (629) 777-6155
+                </a>
+              </li>
             </ul>
           </div>
         </div>

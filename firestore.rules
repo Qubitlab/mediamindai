@@ -26,6 +26,29 @@ service cloud.firestore {
       allow write: if request.auth != null && isAdmin();
     }
 
+    // Public lead capture — anyone can submit a contact-form inquiry.
+    // Only admins can read / update / delete. Field validation prevents
+    // oversize payloads + spam (size caps, required-field check, email regex).
+    match /leads/{leadId} {
+      allow read, update, delete: if request.auth != null && isAdmin();
+      allow create: if isValidLead();
+    }
+
+    function isValidLead() {
+      let d = request.resource.data;
+      return d.keys().hasAll(['name', 'company', 'email', 'created_at'])
+        && d.name is string && d.name.size() > 0 && d.name.size() <= 200
+        && d.company is string && d.company.size() > 0 && d.company.size() <= 200
+        && d.email is string && d.email.size() <= 200 && d.email.matches('.*@.+\\..+')
+        && (!d.keys().hasAny(['phone'])    || (d.phone is string    && d.phone.size() <= 50))
+        && (!d.keys().hasAny(['message'])  || (d.message is string  && d.message.size() <= 5000))
+        && (!d.keys().hasAny(['interests'])|| (d.interests is list  && d.interests.size() <= 10))
+        && (!d.keys().hasAny(['source'])   || (d.source is string   && d.source.size() <= 100))
+        && (!d.keys().hasAny(['page_url']) || (d.page_url is string && d.page_url.size() <= 500))
+        && (!d.keys().hasAny(['referrer']) || (d.referrer is string && d.referrer.size() <= 500))
+        && (!d.keys().hasAny(['status'])   || (d.status is string   && d.status.size() <= 50));
+    }
+
     // Helper functions
     function isAdmin() {
       return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';

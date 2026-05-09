@@ -5,29 +5,29 @@ const services = [
   {
     num: '01',
     title: 'Strategy & Consulting',
-    desc: 'Brand positioning, AI visibility audits, market intelligence, and go-to-market strategies for modern brands navigating AI-driven discovery.',
-    tags: ['Brand Strategy', 'AI Audits', 'GTM'],
+    desc: 'Brand positioning, AI visibility audits, market intelligence, and go-to-market strategies for modern brands navigating AI-driven discovery. Includes Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) audits across all six AI platforms.',
+    tags: ['Brand Strategy', 'GEO Audits', 'AEO Strategy', 'GTM'],
     visual: 'chat', // interactive visual type
   },
   {
     num: '02',
-    title: 'Campaigns & Content',
-    desc: 'National campaign production, social video strategy, content distribution across ESPN, CBS, ABC, NBC, and performance optimization.',
-    tags: ['Video Production', 'Social Media', 'National Campaigns'],
+    title: 'Social Media, Campaigns & Content',
+    desc: 'National campaign production, social media strategy, social video, content distribution across ESPN, CBS, ABC, NBC, and performance optimization. 25B+ views and counting. Soundbite-first formatting and table-rich structure built for GEO citation by AI engines.',
+    tags: ['Social Media', 'Video Production', 'National Campaigns', 'GEO Content'],
     visual: 'chart',
   },
   {
     num: '03',
-    title: 'AI Systems & Development',
-    desc: 'AI platform development, autonomous agents, multi-model integrations, sentiment engines, intelligence pipelines, and production deployment.',
-    tags: ['AI/ML', 'Full-Stack', 'Cloud Deploy'],
+    title: 'Tech, Web & AI Development',
+    desc: 'Full-stack web design and development, mobile and SaaS apps, AI platforms, autonomous agents, multi-model integrations, sentiment engines, intelligence pipelines, and production deployment. Custom GEO + AEO infrastructure powered by AIBlackBox™.',
+    tags: ['Web Dev', 'Apps & SaaS', 'AI/ML', 'GEO/AEO Infra', 'Full-Stack'],
     visual: 'code',
   },
   {
     num: '04',
     title: 'Web3 & Blockchain',
-    desc: 'Smart contract development, on-chain verification, token strategy, DeFi integration, and blockchain infrastructure on Polygon.',
-    tags: ['Solidity', 'Polygon', 'dApps', 'Verification'],
+    desc: 'Smart contract development, on-chain verification, token strategy, DeFi integration, and blockchain infrastructure on Polygon. Cryptographic anchoring for GEO + AEO authority signals via QUBIT Blockchain®.',
+    tags: ['Solidity', 'Polygon', 'AEO Anchoring', 'Verification'],
     visual: 'nodes',
   },
 ]
@@ -159,7 +159,7 @@ export default function Services() {
         </div>
 
         {/* Bento cards */}
-        <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-white/10">
+        <div className="md:col-span-3 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 divide-white/10" id="services-grid">
           {services.map((s, i) => {
             const Visual = visuals[s.visual]
             const isRight = i % 2 === 1
@@ -195,6 +195,69 @@ export default function Services() {
           })}
         </div>
       </div>
+
+      {/* "Ask for the business" — direct CTA strip closing the Services section.
+          No section is complete without an explicit ask. Multiple paths: form,
+          email, phone — let prospects choose their comfort lane. */}
+      <Reveal>
+        <div className="border-t border-white/10 px-8 md:px-14 py-10 md:py-12">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div className="max-w-2xl">
+              <div className="font-mono text-[10px] tracking-[3px] uppercase text-accent font-semibold mb-3 flex items-center gap-3">
+                <span className="w-6 h-px bg-accent" />
+                Ready when you are
+              </div>
+              <h3 className="font-display font-extrabold text-3xl md:text-4xl text-white leading-[1.1] tracking-tight mb-3">
+                Let's get you <span className="text-accent">cited.</span>
+              </h3>
+              <p className="text-sm md:text-base text-txt-dim leading-relaxed">
+                Tell us where you stand and where you want to be — across ChatGPT, Claude, Gemini, Grok, Perplexity, and DeepSeek. We'll show you the gap and how we close it.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 px-7 py-4
+                            bg-accent text-brand-black rounded-md
+                            font-display font-bold text-sm uppercase tracking-[0.16em]
+                            shadow-lg shadow-accent/20 hover:shadow-accent/40
+                            transition-all whitespace-nowrap"
+              >
+                Start a project
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" /><path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+              <a
+                href="mailto:hello@mediamindai.com?subject=GEO%20%2F%20AEO%20Audit%20Inquiry"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4
+                            border border-white/20 text-white rounded-md
+                            font-display font-bold text-sm uppercase tracking-[0.16em]
+                            hover:border-white/40 hover:bg-white/5 transition-all whitespace-nowrap"
+              >
+                Email us
+              </a>
+            </div>
+          </div>
+
+          {/* Trust strip — direct contact paths in case form/email feel too slow */}
+          <div className="mt-10 pt-6 border-t border-white/5 flex flex-wrap gap-x-10 gap-y-3 items-center">
+            <div className="font-mono text-[10px] tracking-[2px] uppercase text-txt-muted">
+              Direct lines
+            </div>
+            <a href="tel:+16297776155" className="font-mono text-[12px] text-txt-dim hover:text-white transition-colors">
+              <span className="text-accent">▸</span>&nbsp;&nbsp;(629) 777-6155
+            </a>
+            <a href="mailto:hello@mediamindai.com" className="font-mono text-[12px] text-txt-dim hover:text-white transition-colors">
+              <span className="text-accent">▸</span>&nbsp;&nbsp;hello@mediamindai.com
+            </a>
+            <a href="mailto:press@mediamindai.com" className="font-mono text-[12px] text-txt-dim hover:text-white transition-colors">
+              <span className="text-accent">▸</span>&nbsp;&nbsp;press@mediamindai.com
+            </a>
+          </div>
+        </div>
+      </Reveal>
+
       </div>
     </section>
   )

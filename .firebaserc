@@ -5,9 +5,14 @@
   "targets": {
     "qxaios": {
       "hosting": {
-        "landing": ["media-mindai"],
-        "dashboard": ["dashboard-mediamindai"]
+        "landing": [
+          "media-mindai"
+        ],
+        "dashboard": [
+          "dashboard-mediamindai"
+        ]
       }
     }
-  }
+  },
+  "etags": {}
 }
